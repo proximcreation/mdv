@@ -17,25 +17,68 @@ vol2dApp.controller('MainCtrl',[
 	    height : /*w.innerHeight|| e.clientHeight|| */g.clientHeight
 	};
 
-	var lineData = [{
-		x: 1,
-		y: 5
-	}, {
-		x: 20,
-		y: 20
-	}, {
-		x: 40,
-		y: 10
-	}, {
-		x: 60,
-		y: 40
-	}, {
-		x: 80,
-		y: 5
-	}, {
-		x: 100,
-		y: 60
-	}];
+	$scope.cursor = {x:0, y:0};
+
+	var getCrossBrowserElementCoords = function (mouseEvent){
+		var result = {
+			x: 0,
+			y: 0
+		};
+
+		if (!mouseEvent){
+			mouseEvent = window.event;
+		}
+
+		if (mouseEvent.pageX || mouseEvent.pageY){
+			$scope.cursor.x = mouseEvent.pageX;
+			$scope.cursor.y = mouseEvent.pageY;
+		}
+		else if (mouseEvent.clientX || mouseEvent.clientY){
+			$scope.cursor.x = mouseEvent.clientX + document.body.scrollLeft +
+			document.documentElement.scrollLeft;
+			$scope.cursor.y = mouseEvent.clientY + document.body.scrollTop +
+			document.documentElement.scrollTop;
+		}
+
+		if (mouseEvent.target){
+			var offEl = mouseEvent.target;
+			var offX = 0;
+			var offY = 0;
+
+			if (typeof(offEl.offsetParent) != "undefined"){
+				while (offEl){
+					offX += offEl.offsetLeft;
+					offY += offEl.offsetTop;
+
+					offEl = offEl.offsetParent;
+				}
+			}
+			else{
+				offX = offEl.x;
+				offY = offEl.y;
+			}
+
+			console.log(offX + " " + offY);
+
+			// $scope.cursor.x -= offX;
+			// $scope.cursor.y -= offY;
+		}
+	};
+
+	$scope.onMouseMove = function ($event) {
+     	getCrossBrowserElementCoords($event);
+    };
+
+	var lineData = [
+		{
+			x: 0,
+			y: 5
+		},
+		{
+			x: 50,
+			y: 10
+		}
+	];
 
 
 	$scope.loadGraph = function(id) {

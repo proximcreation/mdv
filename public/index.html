@@ -31,7 +31,16 @@
 			<h1>Vols</h1>
 			<div class="courses">
 				<h2>Courses</h2>
-				<svg id="courses" width="100%" height="{{config.graph.height}}" ng-init="loadGraph('courses')"></svg>
+				<div class="graph-wrapper" ng-mousemove="onMouseMove($event)">
+					<div class="cursor">
+						<p>
+							x : {{ cursor.x }}<br />
+							y : {{ cursor.y }}
+						</p>
+					</div>
+
+					<svg id="courses" class="graph" width="100%" height="{{config.graph.height}}" ng-init="loadGraph('courses')"></svg>
+				</div>
 			</div>
 
 			<div class="vitesses">
