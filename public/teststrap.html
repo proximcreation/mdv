@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<title>TESTSTRAP</title>
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+	</head>
+	<body>
+		<h1>Titles (h1)</h1>
+		<h2>Title 2 (h2)</h2>
+		<h3>Title 3 (h3)</h3>
+		<h4>Title 4 (h4)</h4>
+		<h5>Title 5 (h5)</h5>
+		<h6>Title 6 (h6)</h6>
+		
+		<hr>
+		<h1>Contents</h1>
+		<a href="" title="link title (a)">link (a)</a><br />
+		<abbr title="abbr explanation">ABBR</abbr><br />
+		
+		<h2>Paragraphs</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore cupiditate voluptas, ipsam dolor, aperiam odio vel fugiat delectus. Incidunt magni commodi beatae, consequuntur debitis, officiis praesentium repellat quaerat quod.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui et minus labore voluptatum vero itaque saepe nam nostrum, hic, magni sed animi harum ipsum odio ducimus aut aliquid tempora obcaecati.</p>
+		<p><cite>Book title (cite)</cite> by A.Uthor</p>
+		
+		<h2>blocquote</h2>
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia labore dolor, repellendus velit voluptates, perspiciatis! Magnam incidunt corporis ab commodi esse deserunt veritatis aperiam porro, velit, ea recusandae accusantium suscipit.</blockquote>
+		
+		<h2>code>pre</h2>
+		<code><pre>
+#!/bin/sh
+	mkdir test;
+	cd test;
+	run;
+		</pre></code>
+		
+		<h2>Lists</h2>
+		<h3>Definitions list (dl)</h3>
+		<dl>
+			<dt>(dt) term</dt>
+			<dd>(dd) definition</dd>
+			<dt>(dt) term</dt>
+			<dd>(dd) definition</dd>
+			<dt>(dt) term</dt>
+			<dd>(dd) definition</dd>
+		</dl>
+
+		<h3>Unordered list (ul)</h3>
+		<ul>
+			<li>list item (li)</li>
+			<li>list item
+				<ul>
+					<li>list item (li)</li>
+					<li>list item (li)
+						<ul>
+							<li>list item (li)</li>
+							<li>list item (li)</li>
+						</ul>		
+					</li>
+				</ul>
+			</li>
+			<li>list item (li)</li>
+		</ul>
+
+		<h3>Ordered list (ol)</h3>
+		<ol>
+			<li>list item (li)</li>
+			<li>list item
+				<ol>
+					<li>list item (li)</li>
+					<li>list item (li)
+						<ol>
+							<li>list item (li)</li>
+							<li>list item (li)</li>
+						</ol>		
+					</li>
+				</ol>
+			</li>
+			<li>list item (li)</li>
+		</ol>
+		<hr>
+		<h1>Forms</h1>
+		<form>
+			<legend>form legend</legend>
+			<div class="input-group">
+				<label>label + input[type="text"]</label><input type="text">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="number"]</label><input type="number">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="date"]</label><input type="date">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="email"]</label><input type="email">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="password"]</label><input type="password">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="tel"]</label><input type="tel">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="checkbok"]</label>
+				<input type="checkbox" id="checkbox" ng-model="data.published"/>
+				<label for="checkbox"><span>javascript swicthing value(yes/no)</span>
+				</label>
+			</div>
+			<div class="input-group">
+				<label>label + input[type="radio"]</label>
+				<input id="radio1" name="n" type="radio" value="1"><label for="radio1"><span>val 1</span></label>
+				<input id="radio2" name="n" type="radio" value="2"><label for="radio2"><span>val 2</span></label>
+			</div>
+			<div class="input-group">
+				<label>default select</label>
+				<select>
+					<optgroup label="group 1">
+						<option value="1">option 1</option>
+						<option value="2">option 2</option>
+						<option value="3">option 3</option>
+					</optgroup>
+					<optgroup label="group 2">
+						<option value="4">option 4</option>
+						<option value="5">option 5</option>
+						<option value="6">option 6</option>
+					</optgroup>
+				</select>
+				<label>default select multiple</label>
+				<select multiple>
+					<optgroup label="group 1">
+						<option value="1">option 1</option>
+						<option value="2">option 2</option>
+						<option value="3">option 3</option>
+					</optgroup>
+					<optgroup label="group 2">
+						<option value="4">option 4</option>
+						<option value="5">option 5</option>
+						<option value="6">option 6</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="input-group">
+				<label>div.select > select</label>
+				<div class="select">
+					<span class="arrow"></span>
+					<select>
+						<optgroup label="group 1">
+							<option value="1">option 1</option>
+							<option value="2">option 2</option>
+							<option value="3">option 3</option>
+						</optgroup>
+						<optgroup label="group 2">
+							<option value="4">option 4</option>
+							<option value="5">option 5</option>
+							<option value="6">option 6</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
+			<div class="input-group">
+				<label>label + input[type="color"]</label><input type="color">
+			</div>
+			<div class="input-group">
+				<label>label + input[type="file"]</label><input type="file">
+			</div>
+			<div class="input-group">
+				<label>label + textarea</label><textarea cols="30" rows="4"></textarea>
+			</div>
+			<div class="input-group">
+				<input type="button" value="input[type='button']"><input type="submit" value="input[type='submit']"><input type="reset" value="input[type='reset']"><button>button</button>
+			</div>
+		</form>
+
+		<hr>
+		<h1>Tables</h1>
+		<table>
+			<caption>caption</caption>
+			<thead>
+				<tr>
+					<th>thead > tr > th</th>
+					<th>thead > tr > th</th>
+					<th>thead > tr > th</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td>tfoot > tr > td</td>
+					<td>tfoot > tr > td</td>
+					<td>tfoot > tr > td</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+				</tr>
+				<tr>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+				</tr>
+				<tr>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+					<td>tbody > tr > td</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+		<h1>Grid</h1>
+		<div class="container">
+			<div class="testbox col-1"></div>
+			<div class="testbox col-11"></div>
+			<div class="testbox col-6"></div>
+			<div class="testbox col-6"></div>
+		</div>
+	</body>
+</html>
