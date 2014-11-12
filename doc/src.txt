@@ -1,0 +1,13 @@
+--
+SVG bezier animé avec D3.js
+http://www.jasondavies.com/animated-bezier/
+
+--
+math.js : lib de math pour javascript
+http://mathjs.org/
+
+--
+node-webkit : package a standalone desktop webapp
+https://github.com/rogerwang/node-webkit
+
+
